@@ -1,0 +1,69 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "colcon: build",
+          "type": "shell",
+          "command": "colcon build --cmake-args '-DCMAKE_BUILD_TYPE=Debug'",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          /* "presentation": {
+              "echo": true,
+              "reveal": "always",
+              "focus": false,
+              "panel": "shared",
+              "showReuseMessage": true,
+              "clear": false
+          }, */
+          "problemMatcher": []
+      },
+      {
+        "label" : "colcon: test",
+        "type" : "shell",
+        "command" : "colcon test && colcon test-result"
+      },
+      {
+        "label" : "colcon: clean",
+        "type" : "shell",
+        "command" : "rm -rf build install log"
+      }
+      /* {
+          "label": "clean",
+          "type": "shell",
+          "command": "colcon build --packages-select-clean",
+          "group": {
+              "kind": "none",
+              "isDefault": false
+          },
+          "presentation": {
+              "echo": true,
+              "reveal": "always",
+              "focus": false,
+              "panel": "shared",
+              "showReuseMessage": true,
+              "clear": false
+          },
+          "problemMatcher": []
+      },
+      {
+          "label": "run",
+          "type": "shell",
+          "command": "ros2 run <your_package> <your_executable>",
+          "group": {
+              "kind": "test",
+              "isDefault": true
+          },
+          "presentation": {
+              "echo": true,
+              "reveal": "always",
+              "focus": false,
+              "panel": "new",
+              "showReuseMessage": true,
+              "clear": false
+          },
+          "problemMatcher": []
+      } */
+  ]
+}
